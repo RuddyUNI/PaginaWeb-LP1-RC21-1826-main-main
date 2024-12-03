@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneo de Videojuegos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .jumbotron {
+      border-radius: 20px;
+      background-color: #212121;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .section {
+      border-radius: 20px;
+      background-color: #333333;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .prize {
+      margin-top: 20px;
+    }
+    .game {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header class="jumbotron text-center fade-in">
+    <h1>Torneo de Videojuegos</h1>
+    <p>¡Bienvenido al emocionante torneo de videojuegos! ¡Demuestra tus habilidades y gana increíbles premios!</p>
+  </header>
+  <div class="container">
+    <div class="section fade-in">
+      <h2>¿En qué consiste el torneo?</h2>
+      <p>El torneo de videojuegos es una competencia en la que jugadores de todo el mundo se reúnen para competir en diferentes videojuegos. Los participantes tendrán la oportunidad de demostrar sus habilidades, competir contra otros jugadores y ganar premios emocionantes.</p>
+      <p>El torneo se llevará a cabo en un formato de eliminatoria directa, con varias rondas de juego hasta llegar a la final.</p>
+    </div>
+    <div class="section prize fade-in">
+      <h2>¡Premios!</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="clickable expand-icon" onclick="toggleContent('primerPremio')">Primer Lugar</h3>
+          <div id="primerPremio" class="hidden-content">
+            <p>El primer lugar recibirá:</p>
+            <ul>
+              <li>Medalla de Oro</li>
+              <li>$1000 en efectivo</li>
+              <li>Paquete de juegos exclusivos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="clickable expand-icon" onclick="toggleContent('segundoPremio')">Segundo Lugar</h3>
+          <div id="segundoPremio" class="hidden-content">
+            <p>El segundo lugar recibirá:</p>
+            <ul>
+              <li>Medalla de Plata</li>
+              <li>$500 en efectivo</li>
+              <li>Acceso gratuito a torneo futuro</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="clickable expand-icon" onclick="toggleContent('tercerPremio')">Tercer Lugar</h3>
+          <div id="tercerPremio" class="hidden-content">
+            <p>El tercer lugar recibirá:</p>
+            <ul>
+              <li>Medalla de Bronce</li>
+              <li>$250 en efectivo</li>
+              <li>Código de descuento para tienda de juegos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section game text-center fade-in">
+      <h2>Juegos Principales del Torneo</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <a href="super_smash_bros">
+            <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_CA/games/switch/s/super-smash-bros-ultimate-switch/hero" alt="Super Smash Bros" class="img-fluid">
+          </a>
+          <h3>Super Smash Bros</h3>
+        </div>
+        <div class="col-md-4">
+          <a href="fifa">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/0515/BOwvC0Q9dfw6QhGvX9dd13Sr.jpg" alt="FIFA" class="img-fluid">
+          </a>
+          <h3>FIFA</h3>
+        </div>
+        <div class="col-md-4">
+          <a href="call_of_duty">
+            <img src="https://images.hdqwalls.com/wallpapers/call-of-duty-mobile-50.jpg" alt="Call Of Duty Mobile" class="img-fluid">
+          </a>
+          <h3>Call Of Duty Mobile</h3>
+        </div>
+      </div>
+    </div>
+    <div class="section text-center fade-in">
+      <h2>Para mas informacion haga un click en el juego deseado.</h2>
+    </div>
+    <p1><p1>
+  </div>
+  <footer class="text-center">
+    <p>© 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleContent(sectionId) {
+      const content = document.getElementById(sectionId);
+      content.classList.toggle('hidden-content');
+      const expandIcon = document.querySelector(`.${sectionId}.expand-icon`);
+      const collapseIcon = document.querySelector(`.${sectionId}.collapse-icon`);
+      if (content.classList.contains('hidden-content')) {
+        expandIcon.classList.remove('hidden-content');
+        collapseIcon.classList.add('hidden-content');
+      } else {
+        expandIcon.classList.add('hidden-content');
+        collapseIcon.classList.remove('hidden-content');
+      }
+    }
+  </script>
+
+  <script>
+    // Animación para los elementos que tienen la clase "fade-in" cuando se desplazan a su posición en la pantalla
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      const fadeIns = document.querySelectorAll('.fade-in');
+      fadeIns.forEach(element => {
+        window.addEventListener('scroll', () => {
+          if (isInViewport(element)) {
+            element.style.opacity = 1;
+          }
+        });
+      });
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - TorneosGamingsRD</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <a class="navbar-brand" href="#">🎮 Portafolio de Juegos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logros' %}">Logros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'politica_privacidad' %}">Política de Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'noticias' %}">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'enlaces_interes' %}">Enlaces de Interés</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+        <li class="nav-item">
+          <button id="darkModeToggle" class="btn btn-light">
+            <img id="darkModeIcon" width="16" height="16" src="{% static 'images/modo_oscuro_luna.png' %}" alt="Modo Oscuro">
+          </button>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron text-center bg-dark text-white">
+    <h1 class="display-4">Contáctanos</h1>
+    <p class="lead">Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros.</p>
+  </header>
+
+  <section id="links" class="section">
+    <h2 class="section-title">Enlaces de Interés</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Canal de YouTube</h5>
+        <a href="https://www.youtube.com/@TorneosGamingsRD" target="_blank">
+          <img src="{% static 'images/fotoperfilyt.jpg' %}" alt="Canal Youtube" class="img-fluid">
+        </a>        
+      </div>
+      <div class="col-md-6">
+        <h5>Ubicación</h5>
+        <iframe width="100%" height="519" src="https://maps.google.com/maps?q=santo%20domingo&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contáctenos</h2>
+    <p>Para consultas, envíenos un correo electrónico a <a href="mailto:torneosgamingsrd@gmail.com">torneosgamingsrd@gmail.com</a>.</p>
+  </section>
+</main>
+
+<footer class="text-center mt-5 py-3 bg-dark text-white">
+  <p>Encuéntranos en las redes:</p>
+  <a href="https://facebook.com" class="bi bi-facebook mx-2" aria-label="Facebook"></a>
+  <a href="https://twitter.com" class="bi bi-twitter mx-2" aria-label="Twitter"></a>
+  <a href="https://instagram.com" class="bi bi-instagram mx-2" aria-label="Instagram"></a>
+  <hr>
+  <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

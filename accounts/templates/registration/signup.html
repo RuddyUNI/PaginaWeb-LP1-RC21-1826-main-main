@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .card {
+            border-radius: 20px;
+            background-color: #444444;
+        }
+
+        .card-title {
+            color: #ffffff;
+        }
+
+        .form-control {
+            background-color: #555555;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .small-text {
+            font-size: 14px;
+            color: #999999;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Estilos para centrar el formulario en el medio */
+        .center-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <div class="col-lg-6"> <!-- Agregado: col-lg-6 para mantener el mismo ancho -->
+            <div class="card border-0 shadow">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4">Regístrate</h1>
+                    <form method="post" id="signup-form" class="signup-form" action="{% url 'signup' %}">
+                      <div class="mt-3 text-center">
+                        <p class="small-text"><h6>Únete a la mejor comunidad de torneos de videojuegos<h6></p>
+                    </div>
+                        {% csrf_token %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-danger" role="alert">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password1" name="password1" placeholder="Contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos 8 caracteres, una letra mayúscula y un número">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-4">Regístrate</button>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <p class="mb-0">¿Ya tienes una cuenta? <a href="{% url 'login' %}" class="text-decoration-none">Inicia sesión aquí</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="text-center">
+  <p>© 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+</footer>
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            if (password1 !== password2) {
+                alert("Las contraseñas no coinciden.");
+                event.preventDefault();
+            }
+
+            var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            if (!regex.test(password1)) {
+                alert("La contraseña debe contener al menos 8 caracteres, una letra mayúscula y un número.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

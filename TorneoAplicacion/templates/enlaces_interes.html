@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enlaces de Interés - TorneosGamingsRD</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/TodasCategorias.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <a class="navbar-brand" href="#">🎮 Portafolio de Juegos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logros' %}">Logros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'politica_privacidad' %}">Política de Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'noticias' %}">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'enlaces_interes' %}">Enlaces de Interés</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+        <li class="nav-item">
+          <button id="darkModeToggle" class="btn btn-light">
+            <img id="darkModeIcon" width="16" height="16" src="{% static 'images/modo_oscuro_luna.png' %}" alt="Modo Oscuro">
+          </button>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron text-center bg-dark text-white">
+    <h1 class="display-4">Enlaces de Interés</h1>
+    <p class="lead">Aquí encontrarás enlaces útiles para explorar más sobre el mundo del desarrollo web y videojuegos.</p>
+  </header>
+
+  <main class="container mt-4">
+    <section id="enlaces" class="section">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h4 class="card-title">Django</h4>
+          <p class="card-text">Un framework web de alto nivel que fomenta el desarrollo rápido y limpio de aplicaciones web.</p>
+          <a href="https://www.djangoproject.com/" class="btn btn-primary" target="_blank">Visitar Django</a>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">Python</h4>
+          <p class="card-text">El lenguaje de programación que impulsa Django. Python es conocido por su simplicidad y poder.</p>
+          <a href="https://www.python.org/" class="btn btn-primary" target="_blank">Visitar Python</a>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">Bootstrap</h4>
+          <p class="card-text">El framework front-end más popular para crear sitios web responsivos y móviles primero.</p>
+          <a href="https://getbootstrap.com/" class="btn btn-primary" target="_blank">Visitar Bootstrap</a>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">MDN Web Docs</h4>
+          <p class="card-text">Un excelente recurso para aprender todo lo relacionado con HTML, CSS y JavaScript.</p>
+          <a href="https://developer.mozilla.org/" class="btn btn-primary" target="_blank">Visitar MDN Web Docs</a>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">W3Schools</h4>
+          <p class="card-text">Una de las plataformas más conocidas para aprender tecnologías web de manera interactiva.</p>
+          <a href="https://www.w3schools.com/" class="btn btn-primary" target="_blank">Visitar W3Schools</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center mt-5 py-3 bg-dark text-white">
+    <p>Encuéntranos en las redes:</p>
+    <a href="https://facebook.com" class="bi bi-facebook mx-2" aria-label="Facebook"></a>
+    <a href="https://twitter.com" class="bi bi-twitter mx-2" aria-label="Twitter"></a>
+    <a href="https://instagram.com" class="bi bi-instagram mx-2" aria-label="Instagram"></a>
+    <hr>
+    <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/TodasCategorias.js' %}"></script>
+</body>
+</html>

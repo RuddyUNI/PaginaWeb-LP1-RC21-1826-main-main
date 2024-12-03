@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad - TorneosGamingsRD</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/TodasCategorias.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <a class="navbar-brand" href="#">🎮 Portafolio de Juegos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logros' %}">Logros</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'politica_privacidad' %}">Política de Privacidad</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'noticias' %}">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'enlaces_interes' %}">Enlaces de Interés</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contacto</a></li>
+        <li class="nav-item">
+          <button id="darkModeToggle" class="btn btn-light">
+            <img id="darkModeIcon" width="16" height="16" src="{% static 'images/modo_oscuro_luna.png' %}" alt="Modo Oscuro">
+          </button>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="jumbotron text-center bg-dark text-white">
+    <h1 class="display-4">Política de Privacidad</h1>
+    <p class="lead">Tu privacidad es importante para nosotros. A continuación te explicamos cómo tratamos tus datos.</p>
+  </header>
+
+  <main class="container mt-4">
+    <section id="privacy-policy" class="section">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h4 class="card-title">Introducción</h4>
+          <p class="card-text">En TorneosGamingsRD, nos comprometemos a proteger tu privacidad. Esta política de privacidad explica cómo recopilamos, usamos y protegemos tu información personal al utilizar nuestros servicios.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">1. Información que Recopilamos</h4>
+          <p class="card-text">Recopilamos información personal cuando te registras en nuestro sitio, participas en torneos o interactúas con nuestra plataforma. La información recopilada incluye:</p>
+          <ul>
+            <li><strong>Datos de registro:</strong> Nombre, dirección de correo electrónico, nombre de usuario, contraseña.</li>
+            <li><strong>Información de uso:</strong> Detalles sobre cómo interactúas con nuestros servicios, incluyendo páginas visitadas y tiempo de uso.</li>
+            <li><strong>Información financiera:</strong> Si participas en pagos o compras, recopilamos detalles sobre la transacción.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">2. Uso de la Información</h4>
+          <p class="card-text">Usamos la información recopilada para los siguientes fines:</p>
+          <ul>
+            <li><strong>Proporcionar servicios:</strong> Para administrar tu cuenta, brindarte acceso a torneos y juegos.</li>
+            <li><strong>Mejorar la plataforma:</strong> Para realizar mejoras en nuestra página web y servicios según el uso que haces de los mismos.</li>
+            <li><strong>Envío de comunicaciones:</strong> Para enviarte actualizaciones, notificaciones de torneos o promociones.</li>
+            <li><strong>Seguridad:</strong> Para prevenir actividades fraudulentas y proteger la integridad de nuestros servicios.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">3. Protección de la Información</h4>
+          <p class="card-text">Tomamos medidas razonables para proteger la información personal que recopilamos. Utilizamos tecnología de cifrado y otros métodos de seguridad para proteger tus datos durante la transmisión y el almacenamiento.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">4. Uso de Cookies</h4>
+          <p class="card-text">Utilizamos cookies para mejorar la experiencia del usuario. Las cookies son pequeños archivos de texto almacenados en tu dispositivo para recordar preferencias y actividades previas en nuestra plataforma. Puedes configurar tu navegador para rechazar las cookies, pero algunas funciones del sitio pueden no funcionar correctamente.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">5. Compartir Información con Terceros</h4>
+          <p class="card-text">No compartimos tu información personal con terceros, salvo en los siguientes casos:</p>
+          <ul>
+            <li><strong>Proveedores de servicios:</strong> Contratamos empresas para realizar tareas en nuestro nombre, como el procesamiento de pagos o el análisis de datos.</li>
+            <li><strong>Obligaciones legales:</strong> Podemos compartir información si es necesario para cumplir con una obligación legal, como una orden judicial.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">6. Derechos del Usuario</h4>
+          <p class="card-text">Tienes derecho a acceder, corregir o eliminar la información personal que tenemos sobre ti. Si deseas ejercer cualquiera de estos derechos, puedes ponerte en contacto con nosotros a través de los métodos proporcionados al final de esta política.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">7. Cambios en la Política de Privacidad</h4>
+          <p class="card-text">Nos reservamos el derecho de actualizar nuestra política de privacidad en cualquier momento. Te notificaremos sobre cualquier cambio importante mediante un aviso en nuestra plataforma. Te recomendamos revisar esta política periódicamente para estar informado sobre cómo protegemos tu información.</p>
+        </div>
+      </div>
+
+      <div class="card shadow-lg mt-4">
+        <div class="card-body">
+          <h4 class="card-title">8. Contacto</h4>
+          <p class="card-text">Si tienes alguna pregunta o inquietud acerca de nuestra política de privacidad, no dudes en contactarnos a través del correo electrónico <a href="mailto:torneosgamingsrd@gmail.com">torneosgamingsrd@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center mt-5 py-3 bg-dark text-white">
+    <p>Encuéntranos en las redes:</p>
+    <a href="https://facebook.com" class="bi bi-facebook mx-2" aria-label="Facebook"></a>
+    <a href="https://twitter.com" class="bi bi-twitter mx-2" aria-label="Twitter"></a>
+    <a href="https://instagram.com" class="bi bi-instagram mx-2" aria-label="Instagram"></a>
+    <hr>
+    <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/TodasCategorias.js' %}"></script>
+</body>
+</html>

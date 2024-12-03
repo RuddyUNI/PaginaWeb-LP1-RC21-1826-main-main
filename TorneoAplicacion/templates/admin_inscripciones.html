@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripciones - Administración</title>
+  {% load static %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/TodasCategorias.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">🎮 TorneosGamingsRD</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'torneos' %}">Torneos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 class="text-center">Inscripciones</h1>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Torneo</th>
+          <th>Fecha de Inscripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for inscripcion in inscripciones %}
+          <tr>
+            <td>{{ inscripcion.usuario.username }}</td>
+            <td>{{ inscripcion.torneo.nombre }}</td>
+            <td>{{ inscripcion.fecha_inscripcion }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="text-center mt-5 py-3 bg-dark text-white">
+    <p>&copy; 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

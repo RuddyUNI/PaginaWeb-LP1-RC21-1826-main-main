@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronda del Torneo de Fifa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .jumbotron {
+      border-radius: 20px;
+      background-color: #212121;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .section {
+      border-radius: 20px;
+      background-color: #333333;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .image {
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-image {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-inscribirse {
+      display: block;
+      width: auto; /* Cambiado de 300px a auto */
+      margin: 50px auto;
+      font-size: 24px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .btn-inscribirse:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+    .fade-in-btn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header class="jumbotron text-center fade-in">
+    <h1>Ronda del Torneo de Fifa</h1>
+    <p>¡Bienvenido a la emocionante ronda del torneo de Fifa! Descubre cómo funciona y prepárate para unirte a la competición.</p>
+  </header>
+  <div class="text-center">
+    <a href="/torneo" class="btn btn-inscribirse fade-in-btn">Volver a la Información del Torneo</a>
+  </div>
+  <div class="container">
+    <div class="section fade-in">
+      <h2>¿Cómo funciona la ronda del torneo?</h2>
+      <p>En esta ronda del torneo de Fifa, los jugadores se enfrentarán en emocionantes partidos uno contra uno. Cada partido se jugará en un formato de eliminatoria directa hasta que quede un único ganador.</p>
+      <p>Los partidos se llevarán a cabo en estadios emblemáticos y los participantes podrán seleccionar sus equipos favoritos.</p>
+    </div>
+    <div class="image text-center fade-in">
+      <img src="https://images8.alphacoders.com/127/1275311.jpg" alt="Fifa" class="img-fluid">
+    </div>
+    <div class="section fade-in">
+      <h2>Prepárate para la competición</h2>
+      <p>Antes de cada partido, los jugadores tendrán la oportunidad de seleccionar sus equipos y ajustar las tácticas según sus preferencias.</p>
+      <p>¡Asegúrate de entrenar duro y perfeccionar tus habilidades para superar a tus oponentes!</p>
+    </div>
+    <div class="section fade-in">
+      <h2>Reglas</h2>
+      <p>Para mantener la competición justa y emocionante, se aplican las siguientes reglas:</p>
+      <ul>
+        <li>Se prohíben las trampas y el uso de cualquier forma de truco o exploit.</li>
+        <li>Los jugadores deben respetar las reglas de fair play y mostrar un comportamiento deportivo en todo momento.</li>
+        <li>Cualquier intento de manipulación del juego o conducta antideportiva resultará en la descalificación del torneo.</li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <a href="/signup" class="btn btn-inscribirse fade-in-btn">Inscribirse</a>
+    </div>
+  </div>
+</div>
+<footer class="text-center">
+  <p>© 2024 TorneosGamingsRD. Todos los derechos reservados.</p>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      const sections = document.querySelectorAll('.section');
+      const images = document.querySelectorAll('.image');
+      const btnInscribirse = document.querySelector('.btn-inscribirse');
+
+      sections.forEach(section => {
+        section.classList.add('fade-in');
+      });
+
+      images.forEach(image => {
+        image.classList.add('fade-in-image');
+      });
+
+      btnInscribirse.classList.add('fade-in-btn');
+    });
+  </script>
+</body>
+</html>

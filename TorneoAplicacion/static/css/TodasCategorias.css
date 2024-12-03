@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #121212;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Modo oscuro */
+  body.dark-mode {
+    background-color: #121212;
+    color: #000000;
+  }
+  
+  /* Navbar y Footer en modo oscuro */
+  body.dark-mode .navbar,
+  body.dark-mode footer {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Botón de alternancia de modo oscuro */
+  #darkModeToggle {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #darkModeToggle:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos del jumbotron */
+  .jumbotron {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Carrusel de juegos */
+  .carousel-inner img {
+    max-height: 1000px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption h5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Estilos de secciones */
+  .section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .section-title {
+    font-size: 2em;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer p, footer a {
+    color: #ffffff;
+  }
+  
+  footer a:hover {
+    color: #007bff;
+  }
+  
+  /* Íconos del footer */
+  footer .bi {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  footer .bi:hover {
+    color: #007bff;
+  }
+  
